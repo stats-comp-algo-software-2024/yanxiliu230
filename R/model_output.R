@@ -1,7 +1,7 @@
 #' @export
 coef.hglm <- function(hglm_out) {
   # TODO: actually compute the coefficients
-  print("coefficients")
+  print(hglm_out$coef)
 }
 
 #' @export
@@ -13,5 +13,5 @@ vcov.hglm <- function(hglm_out) {
 #' @export
 print.hglm <- function(hglm_out) {
   # TODO: print something useful
-  print("print output")
+  print("something")
 }
