@@ -7,11 +7,12 @@ coef.hglm <- function(hglm_out) {
 #' @export
 vcov.hglm <- function(hglm_out) {
   # TODO: actually compute the CI
-  print("confidence interval")
+  warning("confidence interval function not implemented")
 }
 
 #' @export
 print.hglm <- function(hglm_out) {
   # TODO: print something useful
-  print("something")
+  warning("print function not fully operational yet")
+  cat("\ncoef: ", hglm_out$coef)
 }
