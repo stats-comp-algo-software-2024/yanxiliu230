@@ -3,6 +3,7 @@
 S3method(coef,hglm)
 S3method(print,hglm)
 S3method(vcov,hglm)
+export(approx_grad)
 export(hiper_glm)
 export(log_likelihood)
 export(log_likelihood_gradient)
