@@ -2,7 +2,7 @@
 % Please edit documentation in R/mle-finder.R
 \name{log_likelihood}
 \alias{log_likelihood}
-\title{log likelihood function}
+\title{log likelihood function for linear model}
 \usage{
 log_likelihood(par, design, outcome, noise_var = 1)
 }
@@ -19,10 +19,10 @@ log_likelihood(par, design, outcome, noise_var = 1)
 log likelihood function
 }
 \description{
-log likelihood function for linear model, simplified
+log likelihood function for linear model
 }
 \details{
-This function calculate the log likelihood function of linear model simplified to only contain parts related to betas
+This function calculate the log likelihood function of linear model simplified to only contain parts related to parameter (betas/coefficients)
 }
 \examples{
 log_likelihood(par, design, outcome)

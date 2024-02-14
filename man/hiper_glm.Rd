@@ -22,7 +22,7 @@ hiper glm class object containing coefficients of the model
 fit GLM of input design and outcome matrix
 }
 \details{
-This function is fit a GLM model
+This function is fit a GLM model using a use-input solver option, or pseudoinverse method if no solver option input
 }
 \examples{
 hiper_glm(design, outcome, model = 'linear', option = list(mle_solver = 'BFGS')

@@ -1,7 +1,8 @@
-test_that("compare log likelihood numeric gradient with analytical one", {
+test_that('return TRUE since log likelihood numeric gradient approximation should match analytical gradient', {
   n_obs <- 32; n_pred <- 4
   data <- simulate_data(n_obs, n_pred, model = 'linear', seed = 1918)
-  design <- data$design; outcome <- data$outcome
+  design <- data$design
+  outcome <- data$outcome
   beta <- matrix(colMeans(design))
 
   approx_gradient <- approx_grad(function(x) log_likelihood(x, design, outcome), beta)

@@ -2,7 +2,7 @@
 % Please edit documentation in R/mle-finder.R
 \name{mle_finder_optim}
 \alias{mle_finder_optim}
-\title{linear model mle}
+\title{linear model mle finder, by optimization method}
 \usage{
 mle_finder_optim(design, outcome, func, grad, option)
 }
@@ -15,7 +15,7 @@ mle_finder_optim(design, outcome, func, grad, option)
 mle of linear model, approximated
 }
 \description{
-linear model mle finder using optimization method
+linear model mle finder, by optimization method
 }
 \details{
 This function calculate mle of linear model using optimization method with a pre-specified solver

@@ -2,7 +2,7 @@
 % Please edit documentation in R/mle-finder.R
 \name{mle_finder_inv}
 \alias{mle_finder_inv}
-\title{linear model mle}
+\title{linear model mle finder, by pseudoinverse method}
 \usage{
 mle_finder_inv(design, outcome)
 }
@@ -15,7 +15,7 @@ mle_finder_inv(design, outcome)
 mle of linear model
 }
 \description{
-linear model mle finder using pseudoinverse method
+linear model mle finder, by pseudoinverse method
 }
 \details{
 This function calculate mle of linear model using pseudoinverse

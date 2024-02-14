@@ -2,7 +2,7 @@
 % Please edit documentation in R/mle-finder.R
 \name{log_likelihood_gradient}
 \alias{log_likelihood_gradient}
-\title{gradient of log likelihood function}
+\title{gradient of log likelihood function for linear model, taking derivative over beta}
 \usage{
 log_likelihood_gradient(par, design, outcome, noise_var = 1)
 }
@@ -22,7 +22,7 @@ gradient of log likelihood function of linear model with with respect to betas
 gradient of log likelihood function for linear model, taking derivative over beta
 }
 \details{
-This function calculate the gradient of log likelihood function of linear model with respect to betas
+This function calculate the gradient of log likelihood function of linear model with respect to betas (betas/coefficients)
 }
 \examples{
 log_likelihood_gradient(par, design, outcome)
