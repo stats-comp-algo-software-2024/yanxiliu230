@@ -2,7 +2,7 @@
 % Please edit documentation in R/mle-finder.R
 \name{mle_finder_optim}
 \alias{mle_finder_optim}
-\title{linear model mle finder, by optimization method}
+\title{finding mle by optimization}
 \usage{
 mle_finder_optim(design, outcome, func, grad, option)
 }
@@ -12,14 +12,15 @@ mle_finder_optim(design, outcome, func, grad, option)
 \item{outcome}{outcome vector}
 }
 \value{
-mle of linear model, approximated
+mle of input likelihood (and score), approximated
 }
 \description{
-linear model mle finder, by optimization method
+finding mle by optimization
 }
 \details{
-This function calculate mle of linear model using optimization method with a pre-specified solver
+This function calculate mle of given likelihood (and score) function using optimization method with a pre-specified solver
 }
 \examples{
 mle_finder_optim(design, outcome, func, grad, option = list(mle_solver = 'BFGS'))
+
 }
