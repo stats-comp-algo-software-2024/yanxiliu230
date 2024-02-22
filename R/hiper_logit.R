@@ -15,15 +15,19 @@
 #'
 #' @examples hiper_glm(design, outcome, model = 'linear', option = list(mle_solver = 'BFGS')
 #'
-hiper_glm <- function(design, outcome, model = "linear", option = NULL) {
+hiper_glm <- function(design, outcome, model = 'linear', option = NULL) {
 
     hglm_out <- list()
     coef <- c()
 
-    if (is.null(option)) coef <- mle_finder_inv(design, outcome)
-    else if (option$mle_solver == "BFGS") coef <- mle_finder_optim(design, outcome, log_likelihood, log_likelihood_gradient, option)
-    else if (option$mle_solver == "pseudoinverse") coef <- mle_finder_inv(design, outcome)
+    if (model == 'linear') {
+        if (is.null(option) || option$mle_solver == 'pseudoinverse') coef <- mle_finder_linear_inv(design, outcome)
+        else if (option$mle_solver == 'BFGS') coef <- mle_finder_optim(design, outcome, log_likelihood_linear, log_likelihood_linear_gradient, option)
+    } else if (model == 'logit') {
+        if (is.null(option) || option$mle_solver == 'Newton') coef <- mle_finder_logit_nr(design, outcome)
+        else if (option$mle_solver == 'BFGS') coef <- mle_finder_optim(design, outcome, log_likelihood_logit, log_likelihood_logit_gradient, option)
+    }
 
-    hglm_out <- structure(list(coef = coef), class = "hglm")
+    hglm_out <- structure(list(coef = coef), class = 'hglm')
     return(hglm_out)
 }
